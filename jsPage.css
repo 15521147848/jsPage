@@ -1,0 +1,58 @@
+.pageContent{
+    width:100%;
+    height:calc(100% - 50px);
+    overflow: hidden;
+}
+.pageFoot{
+    line-height: 20px;
+    margin:20px auto;
+    -webkit-user-select:none; 
+     -moz-user-select:none; 
+     -ms-user-select:none; 
+     user-select:none;
+}
+/*.pageBtn*/
+.pageBtn{
+    display:inline-block;
+    width:50px;
+    height:100%;
+    float:left;
+    text-align:center;
+    color:#333;
+    font-size:0px;
+    cursor: pointer;
+}
+/*pageNumContent*/
+.pageNumContent{
+    width:auto;
+    height:100%;
+    float:left;
+    overflow:hidden;
+    font-size:0px;
+    text-align:center;
+}
+/*pageNumli*/
+.pageNumli{
+    display:inline-block;
+    width:50px;
+    height:100%;
+    float:left;
+    color:#333;
+    cursor: pointer;
+    font-size:12px;
+}
+.pageBtn.pre{
+    border-right:1px solid #333;
+    font-size:12px;
+}
+.pageBtn.next{
+    border-left:1px solid #333;
+    font-size:12px;
+}
+.noneSelect{
+    color: #999;
+    cursor: default;
+}
+.indexLi{
+    color:#128bff;
+}

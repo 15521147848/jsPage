@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jsPage</title>
+	<link rel="stylesheet" href="jsPage.css">
+	<style>
+		#ul{
+			border: 1px solid #333;
+		}
+	</style>
+</head>
+<body>
+	<h2>jsPage</h2>
+	<ul id='ul'>
+		<li>列表1</li>
+		<li>列表2</li>
+		<li>列表3</li>
+		<li>列表4</li>
+		<li>列表5</li>
+		<li>列表6</li>
+		<li>列表7</li>
+		<li>列表8</li>
+		<li>列表9</li>
+		<li>列表10</li>
+		<li>列表11</li>
+		<li>列表12</li>
+		<li>列表13</li>
+		<li>列表14</li>
+		<li>列表15</li>
+	</ul>
+	<div id='paging'></div>
+<script src='jquery.js'></script>
+<script src="jsPage.js"></script>
+<script>
+	var arr = [];
+	var li = $("#ul li");
+	for(var i=0;i<li.length;i++){
+		arr.push($(li).eq(i).text());
+	}
+	console.log(arr);
+	/*
+	* jsPage v1.0
+	* 属性:
+	* el(dom) 容器  (必须)
+	* dataArr(array) 存储数据的数组 (必须)
+	* index(number) 初始页  默认是1
+	* pageNumber(number) 每页显示条数 默认为4
+	* 
+	* 方法:
+	* format(function)  数据显示格式 
+	* object.set(number)  设置当前页
+	* object.setData(dataArr) 改变数据
+	*/ 
+	 var jsP =new jsPage({
+            el:"#paging",
+            dataArr:arr,
+            format:function(res,index){
+             	return $("<dd>"+res+"</dd>");
+            }
+        });
+</script>
+</body>
+</html>
